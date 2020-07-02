@@ -47,7 +47,7 @@ Downloading the files included in the challenges
 ## Features
 
 - Dump all files from all challenges
-- A simple directory structure get's created sorting the challenges into the corresponding categories (<ctfname>/<category>/<challengename>/<challengefiles>)
+- A simple directory structure get's created sorting the challenges into the corresponding categories (`<ctfname>/<category>/<challengename>/<challengefiles>`)
 
 ## Contribution
 
