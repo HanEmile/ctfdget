@@ -17,7 +17,7 @@ go build ./...
 ## Usage
 
 ```
-./ctfdget --help                                                                                                                                                                                                                                                                                                                                             [±master ●]
+./ctfdget --help
 Usage of ./ctfdget:
   -out string
     	The name of the folder to dump the files to (default "challdump")
@@ -25,6 +25,23 @@ Usage of ./ctfdget:
     	The session (the value of the cookie named 'session') (default "9e8831af-ce30-48c3-8663-4b27262f43f1.pjKPVCYufDhuA9GPJAlc_xh45M8")
   -url string
 		The root URL of the CTFd instance (default "https://ctf.example.com")
+```
+
+Example:
+
+```
+$ go run ./... -session 9e8831af-ce30-48c3-8663-4b27262f43f1.pjKPVCYufDhuA9GPJAlc_xh45M8 -url https://cscml.zenysec.com -out cscmlctf
+Fetching all challenges using the ctf api...
+Done fetching all challenges
+Downloading the files included in the challenges
+→ cscmlctf/misc/Censored
+→ cscmlctf/web/WebServer I
+→ cscmlctf/misc/Thanos
+→ cscmlctf/web/Scrolls List
+→ cscmlctf/pwn/WebServer II
+→ cscmlctf/machine learning/Prosopagnosia
+→ cscmlctf/misc/JSGame
+…
 ```
 
 ## Features
