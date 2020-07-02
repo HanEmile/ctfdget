@@ -50,18 +50,20 @@ Downloading the files included in the challenges
 - A simple directory structure get's created sorting the challenges into the corresponding categories (`<ctfname>/<category>/<challengename>/<challengefiles>`)
 - README.md generation containing the challenge description and some other info:
 
-Example `README.md`, `generated in <ctfname>/<category>/<challengename>/README.md`
+Example `README.md`, `generated in cscmlctf/pwn/Strcmp/README.md`
 ```md
-# Leet
+# Strcmp
 
-Category: misc
+Category: pwn
 
 Files:
-- Challenge.awesome1337
+- chall
 
 ## Description
 
-Do you think you're l33t enough?
+Oh jeez, this is the first time I wrote code, I really hope its good and the stack overflow guys won't be too harsh
+
+nc ctf.cscml.zenysec.com 20005
 
 ## Writeup
 ```
