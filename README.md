@@ -48,6 +48,25 @@ Downloading the files included in the challenges
 
 - Dump all files from all challenges
 - A simple directory structure get's created sorting the challenges into the corresponding categories (`<ctfname>/<category>/<challengename>/<challengefiles>`)
+- README.md generation containing the challenge description and some other info:
+
+Example `README.md`, `generated in <ctfname>/<category>/<challengename>/README.md`
+```md
+# Leet
+
+Category: misc
+
+Files:
+- Challenge.awesome1337
+
+## Description
+
+Do you think you're l33t enough?
+
+## Writeup
+```
+
+(Writeup section included to encourage you to publish writeups :D)
 
 ## Contribution
 
