@@ -47,7 +47,28 @@ Downloading the files included in the challenges
 ## Features
 
 - Dump all files from all challenges
-- A simple directory structure get's created sorting the challenges into the corresponding categories (<ctfname>/<category>/<challengename>/<challengefiles>)
+- A simple directory structure get's created sorting the challenges into the corresponding categories (`<ctfname>/<category>/<challengename>/<challengefiles>`)
+- README.md generation containing the challenge description and some other info:
+
+Example `README.md`, `generated in cscmlctf/pwn/Strcmp/README.md`
+```md
+# Strcmp
+
+Category: pwn
+
+Files:
+- chall
+
+## Description
+
+Oh jeez, this is the first time I wrote code, I really hope its good and the stack overflow guys won't be too harsh
+
+nc ctf.cscml.zenysec.com 20005
+
+## Writeup
+```
+
+(Writeup section included to encourage you to publish writeups :D)
 
 ## Contribution
 
