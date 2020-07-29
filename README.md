@@ -17,7 +17,7 @@ go build ./...
 ## Usage
 
 ```
-./ctfdget --help
+$ ctfdget --help
 Usage of ./ctfdget:
   -out string
     	The name of the folder to dump the files to (default "challdump")
