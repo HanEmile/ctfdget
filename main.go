@@ -8,8 +8,10 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"time"
 
 	"gopkg.in/h2non/gentleman.v2"
+    "gopkg.in/h2non/gentleman.v2/plugins/timeout"
 )
 
 var session = flag.String("session", "9e8831af-ce30-48c3-8663-4b27262f43f1.pjKPVCYufDhuA9GPJAlc_xh45M8", "The session (the value of the cookie named 'session')")
@@ -64,6 +66,10 @@ func fetchAllChallenges() (Challenges, error) {
 	fmt.Println("Fetching all challenges using the ctf api...")
 	cli := gentleman.New()
 	cli.URL(*rootURL)
+
+	// define the timeouts outrageously long, as some CTFs hosted using CTFd are incredibly inresponsive.
+	cli.Use(timeout.Request(1000 * time.Second))
+	cli.Use(timeout.Dial(1000 * time.Second, 2000 * time.Second))
 
 	req := cli.Request()
 	req.Path("/api/v1/challenges")
