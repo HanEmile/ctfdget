@@ -90,6 +90,8 @@ func fetchAllChallenges() (Challenges, error) {
 	// unmarshal the resulting json into a Challenges struct
 	var challenges Challenges
 	if err := json.Unmarshal(res.Bytes(), &challenges); err != nil {
+		fmt.Printf("Challenge unmarshal error: %d\n", res.StatusCode)
+		fmt.Println(res.String())
 		return Challenges{}, err
 	}
 	fmt.Println("Done fetching all challenges")
